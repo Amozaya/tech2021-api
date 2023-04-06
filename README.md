@@ -2,6 +2,9 @@
 
 API (application programming interface) - is a set of defined rules that enable different applications to communicate with each other.
 
+![API Diagram](resources/API_Diagram.png)
+
+
 API architecture could be explained in terms of client and server. The application that user is using acts as a client as it sends a request, and the application that responds is called the server.
 For example, the weather software system contains daily weather data, and the weather app on the phone will communicate with the software via API to show daily updates. In this example, weather app is a client and weather software database is a server.
 
@@ -35,6 +38,51 @@ Communication between clients and servers:
 4. The server returns an HTTP response (output) to the browser
 5. The client (the browser) receives the response
 
+#### HTTP Request Structure
+
+![HTTP_request Diagram](resources/HTTP_request.png)
+
+HTTP Request in general divided in 3 parts:
+1. A request line
+2. A set of header fields
+3. A body, which is optional
+
+*Request line:*
+
+In the request line we usually place HTTP Method to be used and the URL of the request:
+* Request method indicates the method to be performed on the resource by the given Request-URL
+* Request-URL is a Uniform Request Identifier and identifies the resource upon which to apply the request
+
+*Request header:*
+The request header field allows the client to pass additional information about the request, and about the client itself, to the server.
+
+*Request body:*
+The Request body is where we put the additional information that we are going to send to the server.
+In the body of the request we are free to place virtually whatever we want(username, passwords, answers to survey, etc.)
+
+
+#### HTTP Response Structure
+
+![HTTP_response Diagram](resources/HTTP_response.png)
+
+HTTP Response also has its own structure and divided in 3 parts:
+1. A status line
+2. Header
+3. A body, which is optional
+
+*Status line:*
+A status line shows the request status, if it was successful, if there was an error, or if it is required that we take some type of action.
+It is also known as Status Code, and usually if you receive a status code "200", it means that request was successful. 
+
+*Response header:*
+The Header field is just like Headers in request.
+
+*Response body:*
+The Server has an option to send a body with the data that it wants to transmit to us.
+
+
+
+### HTTP Methods
 HTTP defines a set of request methods to indicate the desired action to be performed for a given resources. They are also can be referred to as HTTP verbs.
 5 HTTP verbs:
 * GET - the GET method requests a representation of the specified resource. Requests using GET should only retrieve data
